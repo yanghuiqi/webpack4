@@ -1,17 +1,13 @@
 <template>
   <div id="app">
-    <my-header></my-header>
     <router-view :key="key"/>
   </div>
 </template>
 
 <script>
-import MyHeader from '@/components/Header'
 export default {
   name: 'App',
-  components:{
-     MyHeader
-  },
+  
   computed: {
     key() {
         return this.$route.name !== undefined? this.$route.name +new Date(): this.$route +new Date()
